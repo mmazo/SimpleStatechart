@@ -1,0 +1,122 @@
+
+.simple-statechart {
+    display: table;
+    font-family: Verdana;
+    font-size: 0.9em;
+    left: 0;
+    position: relative;
+    top: 0;
+}
+.simple-statechart .state-wrapper {
+    display: table-row;
+}
+.simple-statechart .state-wrapper-left {
+    display: table-cell;
+}
+.simple-statechart .state-wrapper-right {
+    display: table-cell;
+}
+.simple-statechart .state {
+    background-color: #A2BAD2;
+    border: 2px solid #003B69;
+    border-radius: 8px;
+    margin-bottom: 35px;
+    margin-right: 35px;
+    min-height: 108px;
+    min-width: 108px;
+    padding: 4px;
+    position: relative;
+}
+.simple-statechart .state-active {
+    background-color: #295D89;
+    border: 2px solid #003B69;
+    border-radius: 8px;
+    margin-bottom: 35px;
+    margin-right: 35px;
+    min-height: 108px;
+    min-width: 108px;
+    padding: 4px;
+    position: relative;
+}
+.simple-statechart .transition {
+    background-repeat: no-repeat;
+    display: block;
+    left: 0;
+    padding: 4px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    top: 0;
+}
+.simple-statechart .transition-horizontal {
+    background-position: center center;
+    height: 11px;
+    width: 27px;
+}
+.simple-statechart .transition-vertical {
+    background-position: center center;
+    height: 27px;
+    line-height: 27px;
+    width: 11px;
+}
+.simple-statechart .transition-active {
+    background-color: #FFA500;
+}
+.simple-statechart .transition-up {
+    background-image: url("../images/arrow_up.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    height: 27px;
+    left: 0;
+    line-height: 27px;
+    padding: 4px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    top: 0;
+    width: 11px;
+}
+.simple-statechart .transition-down {
+    background-image: url("../images/arrow_down.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    height: 27px;
+    left: 0;
+    line-height: 27px;
+    padding: 4px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    top: 0;
+    width: 11px;
+}
+.simple-statechart .transition-left {
+    background-image: url("../images/arrow_left.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    height: 11px;
+    left: 0;
+    padding: 4px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    top: 0;
+    width: 27px;
+}
+.simple-statechart .transition-right {
+    background-image: url("../images/arrow_right.gif");
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    height: 11px;
+    left: 0;
+    padding: 4px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    top: 0;
+    width: 27px;
+}

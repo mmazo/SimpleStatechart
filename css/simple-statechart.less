@@ -1,0 +1,107 @@
+/* ---  defaults --- */
+@default-padding: 4px;
+@default-margin: 4px;
+
+@state-bg-color: #A2BAD2;
+@state-bg-color-active: #295D89;
+@state-border-color: #003B69;
+@state-border-thick: 2px;
+
+@arrow-color: #000000;
+@arrow-length: 35px;
+@arrow-thickness: 11px;
+
+/* --- ules --- */
+.simple-statechart{
+
+  position: relative;
+  top: 0px;
+  left: 0px;
+  display: table;
+  
+  font-family: Verdana;
+  font-size: 0.9em;
+  
+  .state-wrapper {
+    display: table-row;
+  }
+  
+  .state-wrapper-left {
+    display: table-cell;
+  }
+  
+  .state-wrapper-right {
+    .state-wrapper-left;
+  }
+
+  .state {
+    min-width: 100px + @default-padding * 2;
+    min-height: 100px + @default-padding * 2;
+    background-color: @state-bg-color;
+    padding: @default-padding;
+    margin-right: @arrow-length;
+    margin-bottom: @arrow-length;
+    background-color: #A2BAD2;
+    border-radius: @default-padding * 2;
+    border: 2px solid @state-border-color;
+    position: relative;
+  }
+  
+  .state-active {
+    .state;
+    background-color: @state-bg-color-active;
+  }
+  
+  .transition {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: @default-padding;
+    background-repeat: no-repeat; 
+  }
+  
+  .transition-horizontal {
+    width: @arrow-length - @default-padding*2;
+    height: @arrow-thickness;
+    background-position: center;
+  }
+  
+  .transition-vertical {
+    width: @arrow-thickness;
+    height: @arrow-length - @default-padding*2;
+    line-height: @arrow-length - @default-padding*2;
+    background-position: center;
+  }
+  
+  .transition-active {
+    background-color: #FFA500;
+  }
+   
+  .transition-up {
+    .transition;
+    .transition-vertical;
+    background-image:url(../images/arrow_up.gif);
+  }
+  
+  .transition-down {
+   .transition;
+   .transition-vertical;
+   background-image:url(../images/arrow_down.gif);
+  }
+  
+  .transition-left {
+    .transition;
+    .transition-horizontal;
+     background-image:url(../images/arrow_left.gif);
+  }
+  
+  .transition-right {
+    .transition;
+    .transition-horizontal;
+    background-image:url(../images/arrow_right.gif);
+  }
+
+}
