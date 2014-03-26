@@ -13,7 +13,7 @@ How to use
 
 Simply add states and transitions to Your page and plugin does all for you:
 
-...
+```
 <body>
   <div id="statechart-example" class="simple-statechart">
     <div id="001" class="state">state 001</div>
@@ -50,7 +50,7 @@ Simply add states and transitions to Your page and plugin does all for you:
     });
   </script>
 </body>
-...
+```
 
 Questions?
 ----------
