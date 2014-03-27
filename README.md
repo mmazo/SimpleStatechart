@@ -45,7 +45,7 @@ Simply add states and transitions to Your page and plugin does all for you:
     jQuery(document).ready(function(){
       jQuery('#statechart-example').statechart({
         activeStateId: '001',
-        activeTransitionId: '001-002'
+        activeTransitionId: ['001-002','001-003']
       });
     });
   </script>
