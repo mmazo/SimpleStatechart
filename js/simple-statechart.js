@@ -24,7 +24,7 @@
     
     // select active state and transition
     jQuery('#' + settings.activeStateId).removeClass('state').addClass('state-active');
-    jQuery('#' + settings.activeTransitionId).addClass('transition-active');
+    jQuery('#' + settings.activeTransitionId.join(',#')).addClass('transition-active');
         
     var positionedStateIds = [];
     
@@ -127,13 +127,12 @@
     	var clickedElement = jQuery(ev.target);
     	if (clickedElement.hasClass('transition-active')){
     		var id = clickedElement.attr('id');
-    		var prevState = jQuery('#' + id.split('-')[0]);
     		var nextState = jQuery('#' + id.split('-')[1]);
     		var nextIndex = clickedElement.attr('data-index')*1 + 1;
     		var nextTrans = jQuery('[data-index="' + nextIndex + '"]');
-    		prevState.removeClass('state-active').addClass('state');
+    		jQuery('.state-active').removeClass('state-active').addClass('state');
     		nextState.addClass('state-active').removeClass('state');
-    		clickedElement.removeClass('transition-active');
+    		jQuery('.transition-active').removeClass('transition-active');
     		nextTrans.addClass('transition-active');
     	}
     });
